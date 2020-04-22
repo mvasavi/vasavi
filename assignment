@@ -1,12 +1,3 @@
-
-#In this five-part exercise, we will count the frequency of each letter in a given string.
-
-#-------------------------------------------------
-
-#1a
-#The lower and upper cases of the English alphabet is stored as alphabet using the attribute ascii_letters
-#from string library (module) where we will store them in alphabet after defining a given sentence
-
 import string
 
 sentence = 'Jim quickly realized that the beautiful gowns are expensive'
@@ -45,38 +36,11 @@ def counter (input_string):
         else:
             count_letters[letter] = 1
     return count_letters
-
-        #print(counter(sentence))
-
-#-------------------------------------------------
-
-#1d
-#Abraham Lincoln was a president during the American Civil War. His famous 1863 Gettysburg Address 
-#has been stored as address, and the counter function defined in part 1c has been loaded. 
-#Use these to return a dictionary consisting of the count of each letter in this address, 
-#and save this as address_count. Print address_count.
-
-address = '1863 Gettysburg'
+    
+address = """Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth."""
 
 address_count = counter(address)
-
-#print(address_count)
-
-#-------------------------------------------------
-
-#1e
-#What is the most common letter used in the Gettysburg Address?
-#Store this letter as most_frequent_letter, and print your answer.
-
-from collections import Counter
-
-most_frequent_letter = Counter(address).most_common(1)
-
-print(most_frequent_letter)
-
-
-
-#Another way to solve it (this solution returns the most common LETTER only without its iteration number)
+print(address_count)
 
 maximum = 0
 letter_maximum = ""
@@ -87,3 +51,6 @@ for letter in address_count:
 
 print(most_frequent_letter)
 #e
+
+
+
